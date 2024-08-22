@@ -1,0 +1,65 @@
+@import "./../../../styles/variables";
+
+.news-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 100%; // Set the max-width to 100% for responsiveness
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .news-card-image {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+  }
+
+  .news-card-content {
+    padding: 2rem;
+    width: 60%;
+    max-width: 100%;
+
+    .news-card-heading {
+      margin-bottom: 1rem;
+    }
+
+    .news-card-subheading {
+      margin-bottom: 1rem;
+    }
+
+    .news-card-body {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .news-card-link {
+      margin-top: 1rem; // Add margin-top to create space between the body and the link
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    .news-card-image {
+      width: 100%;
+    }
+
+    .news-card-content {
+      width: 90%;
+      padding: 1rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}

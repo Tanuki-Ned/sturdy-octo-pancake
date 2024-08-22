@@ -1,0 +1,50 @@
+@import "../../../styles/variables";
+
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: $font;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+
+  &--primary {
+    color: $button-text-color;
+    background-color: $button-bg-color;
+
+    &:hover {
+      background-color: darken($button-bg-color, 10%);
+    }
+  }
+
+  &--secondary {
+    color: $font-color-secondary;
+    background-color: $background-grey;
+
+    &:hover {
+      background-color: darken($button-bg-color-secondary, 10%);
+    }
+  }
+
+  &--danger {
+    color: $font-color-primary;
+    background-color: $error-color;
+
+    &:hover {
+      background-color: darken($error-color, 10%);
+    }
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+    padding: 1.25rem 2.5rem;
+  }
+}

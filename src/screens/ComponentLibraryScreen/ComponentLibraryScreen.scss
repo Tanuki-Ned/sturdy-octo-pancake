@@ -1,0 +1,60 @@
+.component-library-page {
+  max-width: 1200px; // Adjust as needed for your layout
+  margin: 0 auto;    // Center the content horizontally
+  padding: 0 1rem;   // Add some horizontal padding for smaller screens
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .component-section {
+    margin-bottom: 3rem;
+
+    h1 {
+      text-align: left;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    pre {
+      background-color: #f0eaea; // Light grey background for the code block
+      border: 1px solid #ddd;    // Light border
+      border-radius: 4px;       // Rounded corners
+      padding: 1rem;            // Add some padding inside the code block
+      overflow-x: auto;         // Allow horizontal scrolling if code is too wide
+      max-width: 100%;          // Ensure code block does not exceed container width
+    }
+
+    code {
+      color: #333;              // Text color for the code
+      font-family: 'Courier New', Courier, monospace; // Use a monospace font for the code
+      display: block;           // Make sure code is displayed on its own line
+    }
+
+    button {
+      margin-right: 1rem;
+    }
+
+    img {
+      height: 100px;
+      width: auto;
+    }
+
+    .icon-examples {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .icon {
+        font-size: 2rem;
+      }
+    }
+  }
+}

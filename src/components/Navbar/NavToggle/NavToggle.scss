@@ -1,0 +1,19 @@
+@import "./../../../styles/variables";
+
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $font-color-primary;
+  font-size: 1.5rem;
+ 
+
+  img {
+    height: 36px;
+    width: auto;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

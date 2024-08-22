@@ -1,0 +1,124 @@
+@import "../../styles/variables";
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  min-height: 60vh;
+
+  &-content {
+    display: flex;
+    flex-direction: column; /* Default to column for small screens */
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row; /* Change to row for larger screens */
+      justify-content: space-between;
+      padding: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 3rem;
+    }
+  }
+
+  .hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+
+    .hero-logo {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+
+      @media (min-width: 768px) {
+        max-width: 80%;
+        margin-bottom: 0; /* Remove margin-bottom for larger screens */
+      }
+
+      @media (min-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center align items for small screens */
+    text-align: center; /* Center text for small screens */
+
+    @media (min-width: 768px) {
+      align-items: flex-start; /* Align items to the start for larger screens */
+      text-align: left; /* Align text to the left for larger screens */
+    }
+
+    .hero-logo-text {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+
+      
+      @media (min-width: 768px) {
+        max-width: 80%;
+      }
+
+      @media (min-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+
+  .variant-h3 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 2), 0 0 2px rgba(0, 0, 0, 2);
+
+    @media (min-width: 768px) {
+       font-size: 3rem;
+     }
+
+   @media (min-width: 1024px) {
+      font-size: 4rem;
+       }
+    }
+
+    .hero-button {
+      padding: 0.75rem 1.5rem;
+      width: 236px;
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: $font;
+      color: $button-text-color;
+      background-color: $button-bg-color;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: darken($button-bg-color, 10%);
+      }
+
+      @media (min-width: 768px) {
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 1.5rem;
+        padding: 1.25rem 2.5rem;
+      }
+    }
+  }
+}

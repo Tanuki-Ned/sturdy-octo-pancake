@@ -1,0 +1,39 @@
+@import "./variables";
+
+
+body {
+  margin: 0;
+  background-color: $background-white;
+  color: $theme-light-font-color;
+  
+  a {
+    color: $link-color;
+  }
+
+  svg, .icon {
+    fill: $theme-light-font-color;
+    color: $theme-light-font-color;
+  }
+}
+
+// Dark Theme
+.dark-theme {
+  background-color: $background-dark;
+  color: $theme-dark-font-color;
+
+  body {
+    background-color: $background-dark;
+    color: inherit;
+
+    a {
+      color: $link-color-secondary; // Or define a dark theme link color
+    }
+
+    svg, .icon {
+      fill: $theme-dark-font-color;
+      color: $theme-dark-font-color;
+    }
+
+    
+  }
+}

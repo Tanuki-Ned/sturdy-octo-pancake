@@ -1,0 +1,18 @@
+@import '../../../styles/variables';
+
+.form-field {
+  margin-bottom: 1.5rem; 
+
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem; 
+    font-weight: bold; 
+  }
+
+  .input-field {
+    width: 80%; 
+    padding: 0.5rem; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+  }
+}

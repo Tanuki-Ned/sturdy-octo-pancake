@@ -1,0 +1,13 @@
+.code-block {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #333;
+  overflow-x: auto;
+}
+
+.code-block code {
+  white-space: pre-wrap;
+}

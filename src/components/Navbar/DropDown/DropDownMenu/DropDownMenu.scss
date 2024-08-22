@@ -1,0 +1,49 @@
+@import "../../../../styles/variables";
+
+.dropdown-menu {
+  display: none; // Initially hidden
+  position: relative;
+  background-color: $background-white; // Default light theme background
+  list-style: none;
+  margin-top: 15px;
+  padding: 0;
+  width: 100%;
+  border-style: solid;
+  border-radius: 5px;
+  transition: background-color 0.3s; // Smooth theme transition
+
+  &.is-open {
+    display: block; // Show dropdown when open
+  }
+
+  li {
+    padding: 8px 16px;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+      background-color: $link-color-secondary;
+    }
+  }
+
+  @media (min-width: 768px) {
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: auto;
+    min-width: 250px;
+    margin-top: 0;
+  }
+
+  // Dark theme styles
+  .dark-theme & {
+    background-color: $background-dark;
+    border-color: $link-color-secondary;
+
+    li {
+      &:hover {
+        background-color: $background-white;
+      }
+    }
+  }
+}

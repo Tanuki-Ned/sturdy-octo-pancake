@@ -1,0 +1,40 @@
+@import "./../../../styles/variables";
+
+
+.nav-item {
+  margin: 0.5rem 0;
+  position: relative;
+  
+
+  a {
+    text-decoration: none;
+    font-size: 0.9rem;
+ 
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      color: $font-color-secondary; 
+    }
+  }
+
+  // Dark theme styles
+  .dark-theme & {
+    a {
+      color: $link-color-secondary; 
+    }
+
+    &:hover {
+      a {
+        color: $font-color-secondary; 
+      }
+    }
+    
+  }
+
+  @media (min-width: 768px) {
+    margin: 0 1rem;
+  }
+}

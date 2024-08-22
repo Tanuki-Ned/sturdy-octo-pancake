@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-white;
+  z-index: 9999;
+
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+  }
+
+  p {
+    margin-top: 1rem;
+    color: #fff;
+  }
+
+  img {
+    height: 86px;
+    width: auto;
+  }
+}

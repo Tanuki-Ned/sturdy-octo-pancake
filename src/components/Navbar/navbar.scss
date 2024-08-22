@@ -1,0 +1,98 @@
+@import "../../styles/variables";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: $font-color-primary;
+  position: relative;
+  border-bottom: 2px solid $font-color-primary;
+
+  // Brand section
+  &-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  // Logo styling
+  &-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  // Menu styling
+  &-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $background-white;
+    border-top: 1px solid $font-color-primary;
+    padding: 1rem 0;
+    z-index: 1000;
+
+    &.is-active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      background-color: transparent;
+      border-top: none;
+      padding: 0;
+    }
+  }
+
+  // Dark theme styles
+  .dark-theme & {
+    color: $theme-dark-font-color;
+    border-bottom: 2px solid $font-color-primary;
+
+    &-menu {
+      background-color: $theme-dark-background;
+      
+    }
+
+    &-logo img {
+      filter: brightness(0) invert(1); 
+    }
+  }
+
+  // Dropdown menu styling
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      position: relative;
+    }
+  }
+
+  // Navbar start section
+  &-start {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin-left: auto;
+    }
+  }
+}
